@@ -1,0 +1,82 @@
+{
+ "configVer": "1.0",
+ "activeUID": "94b6a8908f1e44e0be802b111e12c2d7",
+ "userList": [
+  {
+   "userId": "94b6a8908f1e44e0be802b111e12c2d7",
+   "nickname": "凑斗牙鸟",
+   "accountName": "147***009",
+   "workdir": "/",
+   "workdirFileEntity": {
+    "driveId": "",
+    "domainId": "",
+    "fileId": "root",
+    "fileName": "/",
+    "fileSize": 0,
+    "fileType": "folder",
+    "createdAt": "",
+    "updatedAt": "",
+    "fileExtension": "",
+    "uploadId": "",
+    "parentFileId": "",
+    "crc64Hash": "",
+    "contentHash": "",
+    "contentHashName": "",
+    "path": "/"
+   },
+   "albumWorkdir": "",
+   "albumWorkdirFileEntity": {
+    "driveId": "",
+    "domainId": "",
+    "fileId": "",
+    "fileName": "",
+    "fileSize": 0,
+    "fileType": "",
+    "createdAt": "",
+    "updatedAt": "",
+    "fileExtension": "",
+    "uploadId": "",
+    "parentFileId": "",
+    "crc64Hash": "",
+    "contentHash": "",
+    "contentHashName": "",
+    "path": ""
+   },
+   "activeDriveId": "25151971",
+   "driveList": [
+    {
+     "driveId": "25151971",
+     "driveName": "文件",
+     "driveTag": "File"
+    },
+    {
+     "driveId": "66720971",
+     "driveName": "相册",
+     "driveTag": "Album"
+    }
+   ],
+   "refreshToken": "ab3e1b99457a474eb354af481b74b9d7",
+   "webToken": {
+    "accessTokenType": "Bearer",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NGI2YTg5MDhmMWU0NGUwYmU4MDJiMTExZTEyYzJkNyIsImN1c3RvbUpzb24iOiJ7XCJjbGllbnRJZFwiOlwiMjVkelgzdmJZcWt0Vnh5WFwiLFwiZG9tYWluSWRcIjpcImJqMjlcIixcInNjb3BlXCI6W1wiRFJJVkUuQUxMXCIsXCJTSEFSRS5BTExcIixcIkZJTEUuQUxMXCIsXCJVU0VSLkFMTFwiLFwiVklFVy5BTExcIixcIlNUT1JBR0UuQUxMXCIsXCJTVE9SQUdFRklMRS5MSVNUXCIsXCJCQVRDSFwiLFwiT0FVVEguQUxMXCIsXCJJTUFHRS5BTExcIixcIklOVklURS5BTExcIixcIkFDQ09VTlQuQUxMXCIsXCJTWU5DTUFQUElORy5MSVNUXCIsXCJTWU5DTUFQUElORy5ERUxFVEVcIl0sXCJyb2xlXCI6XCJ1c2VyXCIsXCJyZWZcIjpcImh0dHBzOi8vd3d3LmFsaXl1bmRyaXZlLmNvbS9cIixcImRldmljZV9pZFwiOlwiMTQxZDExZTUyYjk2NDBiZTg0NTJiNjI4NmViOTgyODJcIn0iLCJleHAiOjE2OTM4MDcyMDMsImlhdCI6MTY5Mzc5OTk0M30.ki5Z1HGTG0goVztVMuVcrULgQ8xdOgirPl_usqy6lItz_uZLtSfMXKggTvP39WHZzppH78WhcFQ3QWnjaI4asY_-9CJs1GaZRvHs8SVdH7rnLjX-jUdmuejU7M_Ctt9RAv-P2m--KXSEFc_rwFPMxiy2SwmyRkmQzaupIDqPo4A",
+    "refreshToken": "141d11e52b9640be8452b6286eb98282",
+    "expiresIn": 7200,
+    "expireTime": "2023-09-04 06:00:03"
+   }
+  }
+ ],
+ "cacheSize": 0,
+ "maxDownloadParallel": 0,
+ "maxUploadParallel": 0,
+ "maxDownloadRate": 0,
+ "maxUploadRate": 0,
+ "transferUrlType": 0,
+ "saveDir": "/root/Downloads",
+ "proxy": "",
+ "localAddrs": "",
+ "updateCheckInfo": {
+  "preferUpdateSrv": "",
+  "latestVer": "",
+  "checkTime": 0
+ }
+}

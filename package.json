@@ -1,0 +1,46 @@
+{
+  "name": "lexue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lvchengbin/cli-table": "^0.0.1",
+    "axios": "^1.1.3",
+    "bent": "^7.3.12",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "crypto-js": "^4.0.0",
+    "fast-xml-parser": "^3.17.5",
+    "form-data": "^4.0.0",
+    "form-urlencoded": "^6.0.6",
+    "fuse.js": "^6.4.6",
+    "jsmodbus": "^4.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.15",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-jwt": "^4.0.3",
+    "koa-mount": "^4.0.0",
+    "koa-route": "^3.2.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "level": "^8.0.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.1",
+    "sequelize": "^6.3.5",
+    "sequelize-auto": "^0.7.6",
+    "socket.io": "^4.5.4",
+    "uuid": "^8.3.2",
+    "ws": "^7.4.4"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.3",
+    "utf-8-validate": "^5.0.4"
+  }
+}

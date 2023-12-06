@@ -1,0 +1,484 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-05 05:46:24
+ * @LastEditTime: 2021-08-31 00:48:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /lexue/upload.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>upupup</title>
+  <base target="_blank" />
+</head>
+
+<style>
+  .rigth_tool {
+    position: absolute;
+    width: 600px;
+    top: 30px;
+    left: 400px;
+  }
+
+  .btn {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .con {
+    display: none;
+  }
+
+  .time_ctr_con {
+
+    position: absolute;
+    width: 600px;
+    top: 30px;
+    left: 1000px;
+  }
+
+  .show_time_con {
+    font-size: 20px;
+  }
+</style>
+
+<body>
+
+  <form action="https://meamoe.ml/koa/upload/dist" method="post" enctype="multipart/form-data">
+    <h3>提交至dist</h3>
+    <input type="file" name="file" id="file" value="" webkitdirectory multiple="multiple" />
+    <input type="submit" value="提交" />
+
+
+  </form>
+
+  <form action="https://meamoe.ml/koa/upload/record" method="post" enctype="multipart/form-data">
+    <h3>提交文件夹至Record</h3>
+    <input type="file" name="file" id="file" value="" webkitdirectory multiple="multiple" />
+    <!-- <input type="file" name="file" id="file" value="选择文件"  multiple="multiple" /> -->
+    <input type="submit" value="提交" />
+
+
+  </form>
+
+  <form action="https://meamoe.ml/koa/upload/record" method="post" enctype="multipart/form-data">
+    <h3>提交文件至Record</h3>
+    <input type="file" name="file" id="file" value="" multiple="multiple" />
+    <!-- <input type="file" name="file" id="file" value="选择文件"  multiple="multiple" /> -->
+    <input type="submit" value="提交" />
+
+
+  </form>
+
+  <form action="https://meamoe.ml/koa/upload/dist-backup" method="post" enctype="multipart/form-data">
+    <h3>提交至backup</h3>
+    <input type="file" name="file" id="file" value="" webkitdirectory multiple="multiple" />
+    <!-- <input type="file" name="file" id="file" value="选择文件"  multiple="multiple" /> -->
+    <input type="submit" value="提交" />
+
+
+  </form>
+
+  <div class='rigth_tool'>
+    <button class='month_stone btn'>
+      <a href="https://meamoe.ml/koa/genshin/month" target="_Blank">月度原石统计</a>
+    </button>
+
+    <button class='sign_info btn'>
+      <a href="https://meamoe.ml/koa/genshin/sign_info" target="_Blank">今日签到情况</a>
+    </button>
+
+    <!-- <button class=' btn'>
+      <a href="https://meamoe.ml/koa/genshin/record_mass" target="_Blank">记录质变仪</a>
+    </button>
+
+
+    <button class=' btn'>
+      <a href="https://meamoe.ml/koa/genshin/record_ore" target="_Blank">记录矿石</a>
+    </button> -->
+
+    <button class=' btn' id='check_mass'>
+      检查质变仪
+    </button>
+
+    <button class=' btn' id="release_btn">
+      释放式上传
+    </button>
+
+    <button class=' btn' id="release_mp4_btn">
+      上传mp4
+    </button>
+
+    <button class=' btn' id="free_btn">
+      自由选择上传
+    </button>
+
+    <button class=' btn' id="show_record_btn">
+      查看record
+    </button>
+
+    <button class=' btn' id="show_size_btn">
+      列出文件大小
+    </button>
+
+    <button class=' btn' id="delete_file_btn">
+      删除文件
+    </button>
+
+    <button class=' btn'>
+      <a href="https://meamoe.ml:8666" target="_Blank">命令行</a>
+    </button>
+
+    <button class=' btn'>
+      <a href="https://meamoe.ml/aria2/home/#!/downloading" target="_Blank">aria2页面</a>
+    </button>
+
+    <button class=' btn'>
+      <a href="https://meamoe.ml/record/" target="_Blank">下载文件夹</a>
+    </button>
+
+    <button class=' btn'>
+      <a href="https://meamoe.ml/mydrive/" target="_Blank">onedrive网盘</a>
+    </button>
+
+    <button class=' btn' id="left_storage_btn">
+      剩余空间
+    </button>
+
+    <button class=' btn'>
+      <a href="https://ngabbs.com/thread.php?fid=650" target="_Blank">原神nga</a>
+    </button>
+
+    <button class=' btn'>
+      <a href="https://tieba.baidu.com/f?ie=utf-8&kw=v" target="_Blank">v8</a>
+    </button>
+
+    <button class=' btn' id="to_mp4_btn">
+      自由转mp4
+    </button>
+
+    <br>
+
+    <div class='free_input_con con'>
+      <textarea name="" id="free_name" cols="30" rows="10" placeholder="文件名逗号分割"></textarea>
+      <input type="text" id='free_dir' placeholder="onedirve目标文件夹" value="/movie">
+      <button class="free_up_btn">提交</button>
+    </div>
+
+    <div class='to_mp4_con con'>
+      <textarea name="" id="to_mp4_name" cols="30" rows="10" placeholder="文件名逗号分割"></textarea>
+      <button class="to_mp4_up_btn">提交</button>
+    </div>
+
+    <div class='rm_file_con con'>
+      <textarea name="" id="file_name" cols="30" rows="10" placeholder="文件名逗号分割"></textarea>
+      <button class="rm_file_up_btn">提交</button>
+    </div>
+
+    <div class='con show_record_con'>
+
+    </div>
+
+    <div class='con show_size_con left_storage_con'>
+
+    </div>
+
+
+  </div>
+
+  <div class="time_ctr_con">
+    <button class=' btn start' id="">
+      开始计时
+    </button>
+    <button class=' btn stop' id="">
+      暂停计时
+    </button>
+    <button class=' btn reset' id="">
+      重置计时
+    </button>
+    <button class=' btn test_ws' id="">
+      测试ws
+    </button>
+
+    <div class='show_time_con'>
+
+    </div>
+  </div>
+
+</body>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/socket.io/3.0.0-rc4/socket.io.min.js"></script>
+<script>
+  let cons = $('.con')
+  let is_get_time = 0
+  const socket = io({
+    transports: ["websocket"]
+  });
+
+  function init() {
+    build_ws()
+  }
+  init()
+
+  function build_ws() {
+
+    socket.on("hello", (arg) => {
+      console.log(arg); // world
+    });
+
+    socket.on("start_res", (arg) => {
+      alert(arg); // world
+    });
+
+    socket.on("stop_res", (arg) => {
+      alert(arg); // world
+    });
+
+    socket.on("reset_res", (arg) => {
+      alert(arg); // world
+    });
+
+    socket.on("get_time_res", (arg) => {
+      show_time(arg)
+    });
+
+    socket.on("disconnect", () => {
+      console.log('socket dis'); // undefined
+    });
+
+
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  $('.btn.start').click(async (e) => {
+    start_timer()
+    is_get_time = 1
+    while (is_get_time) {
+      get_time()
+      await sleep(1000)
+    }
+  })
+
+  $('.btn.reset').click((e) => {
+    reset_timer()
+  })
+
+  $('.btn.stop').click((e) => {
+    is_get_time = 0
+    stop_timer()
+  })
+  $('.btn.test_ws').click(async (e) => {
+
+    // await sleep(4000)
+    // socket.disconnect()
+  })
+
+  function start_timer() {
+    socket.emit('start')
+  }
+
+  function stop_timer() {
+    socket.emit('stop')
+  }
+
+  function reset_timer() {
+    socket.emit('reset')
+  }
+
+  function show_time(data) {
+    $('.show_time_con').text(ms_to_min(data))
+  }
+
+  function get_time() {
+    socket.emit('get_time')
+  }
+
+  function ms_to_min(ms) {
+    let hour = Math.floor((ms / 1000 / 60 / 60) << 0)
+    let min = Math.floor(((ms % (1000 * 60 * 60)) / 1000 / 60) << 0)
+    let sec = Math.floor((ms / 1000) % 60)
+    return `${hour} : ${min} : ${sec}`
+  }
+
+
+  function all_con_display_none() {
+    cons.css('display', 'none')
+  }
+
+
+  $("#free_btn").click((event) => {
+    all_con_display_none()
+    $('.free_input_con').css('display', 'block')
+  });
+
+  $("#to_mp4_btn").click((event) => {
+    all_con_display_none()
+    $('.to_mp4_con').css('display', 'block')
+  });
+  
+  $('#delete_file_btn').click(e => {
+    all_con_display_none()
+    $('.rm_file_con').css('display', 'block')
+  })
+
+
+
+
+  $('.free_up_btn').click(e => {
+    let name_str = $("#free_name").val()
+    let dir = $("#free_dir").val()
+
+    let nlist = name_str.split(',')
+    let data = {
+      "name_list": nlist,
+      "target": dir
+    }
+    $.post(
+      'https://meamoe.ml/koa/mv_upload/record_free',
+      data,
+      (data, textStatus, jqXHR) => {
+        console.log(data);
+        if (data == 'ok') {
+          alert('估计已成功')
+        } else {
+          alert('出错')
+        }
+      })
+    // console.log(nlist,dir);
+  })
+
+  $('.to_mp4_up_btn').click(e => {
+    let name_str = $("#to_mp4_name").val()
+    // let dir = $("#free_dir").val()
+
+    let nlist = name_str.split(',')
+    console.log(nlist);
+    let data = {
+      "name_list": nlist,
+    }
+    $.post(
+      'https://meamoe.ml/koa/mv_upload/to_mp4',
+      data,
+      (data, textStatus, jqXHR) => {
+        alert(data)
+      })
+    // console.log(nlist,dir);
+  })
+
+  $('#release_btn').click(e => {
+    $.get(
+      'https://meamoe.ml/koa/mv_upload/record_release',
+      (data) => {
+        alert(data)
+      }
+    )
+  })
+
+  $('#release_mp4_btn').click(e => {
+    $.get(
+      'https://meamoe.ml/koa/mv_upload/record_release_mp4',
+      (data) => {
+        alert(data)
+      }
+    )
+  })
+
+  $('#show_record_btn').click(e => {
+    all_con_display_none()
+    $('.show_record_con').empty()
+    $.get(
+      'https://meamoe.ml/koa/mv_upload/show_record',
+      (data) => {
+        // console.log(data);
+        let list = data.data.split(`\n`)
+        for (const i of list) {
+          let item = $("<div></div>").text(i)
+          $('.show_record_con').append(item)
+        }
+        $('.show_record_con').css('display', 'block')
+      }
+    )
+  })
+
+  $('#check_mass').click(e => {
+    $.get(
+      'https://meamoe.ml/koa/genshin/check_mass',
+      (data) => {
+        alert(data)
+      }
+    )
+  })
+
+  $('#check_ore').click(e => {
+    $.get(
+      'https://meamoe.ml/koa/genshin/check_ore',
+      (data) => {
+        alert(data)
+      }
+    )
+  })
+
+  $('#show_size_btn').click(e => {
+    all_con_display_none()
+    $('.show_size_con').empty()
+    $.get(
+      'https://meamoe.ml/koa/mv_upload/record_size_list',
+      (data) => {
+        let str = data
+        let list = str.data.split(`\n`)
+        // console.log(list);
+        for (const i of list) {
+          let item = $("<div></div>").text(i)
+          $('.show_size_con').append(item)
+        }
+
+        $('.show_size_con').css('display', 'block')
+      }
+    )
+  })
+
+  $('#left_storage_btn').click(e => {
+    all_con_display_none()
+    $('.left_storage_con').empty()
+    $.get(
+      'https://meamoe.ml/koa/mv_upload/left_storage',
+      (data) => {
+        let str = data
+        let list = str.data.split(`\n`)
+        // console.log(list);
+        for (const i of list) {
+          let item = $("<div></div>").text(i)
+          $('.left_storage_con').append(item)
+        }
+        $('.left_storage_con').css('display', 'block')
+      }
+    )
+  })
+  $('.rm_file_up_btn').click(e => {
+    let name_str = $("#file_name").val()
+    // let dir = $("#free_dir").val()
+
+    let nstr = name_str.replace(/\n/g,',')
+    console.log(nstr);
+    let data = {
+      "fileName": nstr,
+    }
+    $.post(
+      'https://meamoe.ml/koa/mv_upload/rmFile',
+      data,
+      (data, textStatus, jqXHR) => {
+        alert(data)
+      })
+    // console.log(nlist,dir);
+  })
+</script>
+
+</html>
